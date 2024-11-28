@@ -1,6 +1,10 @@
 import pandas as pd
 from google.cloud import documentai_v1 as documentai
+from dotenv import load_dotenv
+import os
 
+# charge variables .env
+load_dotenv()
 
 def online_process(
     project_id: str,
@@ -50,9 +54,9 @@ def trim_text(text: str):
     return text.strip().replace("\n", " ")
 
 
-PROJECT_ID = "documentaitutorial-443110"
+PROJECT_ID = os.getenv("PROJECT_ID")  # Create project in Cloud Console
 LOCATION = "eu"  # Format is 'us' or 'eu'
-PROCESSOR_ID = "29044b2fc1b5c769"  # Create processor in Cloud Console
+PROCESSOR_ID = os.getenv("PARSER_ID")  # Create processor in Cloud Console
 
 # The local file in your current working directory
 FILE_PATH = "intake-form.pdf"
