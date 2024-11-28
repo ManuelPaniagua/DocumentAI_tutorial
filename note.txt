@@ -1,0 +1,9 @@
+This is an option for batch processing.
+
+Batch processing uses Long Running Operations to manage requests in an asynchronous manner, so we have to make the request and retrieve the output in a different manner than online processing. However, the output will be in the same Document object format whether using online or batch processing.
+
+This step shows how to provide specific documents for Document AI to process. A later step will show how to process an entire directory of documents.
+
+For the moment, I do not use but maybe I will in the future.
+
+https://codelabs.developers.google.com/codelabs/docai-ocr-python#8
